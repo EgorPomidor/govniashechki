@@ -17,5 +17,10 @@ namespace Egor666
             c2 = card2;
             c3 = card3;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}{1}{2}", card1, card2, card3);
+        }
     }
 }

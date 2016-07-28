@@ -15,11 +15,14 @@ namespace Egor666
             Flop flop = new Flop(deck.Cards[0], deck.Cards[1], deck.Cards[2]);
 
             deck.Cards.RemoveAt(0);
-            deck.Cards.RemoveAt(0);
-            deck.Cards.RemoveAt(0);
+            deck.Cards.RemoveAt(1);
+            deck.Cards.RemoveAt(2);
 
             Console.WriteLine(flop);
 
+            Convert convert = new Convert();
+
+            Console.WriteLine(convert);
 
             //for (int i= 0; i<5;i++)
             //{

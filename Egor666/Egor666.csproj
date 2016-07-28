@@ -42,8 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="test\DiapasonLight.cs" />
+    <Compile Include="test\IForConvert.cs" />
     <Compile Include="test\Suit1.cs" />
-    <Compile Include="test\ConvertPlus.cs" />
     <Compile Include="test\Convert.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="test\Heand.cs" />
