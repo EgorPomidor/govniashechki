@@ -41,17 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="test\DiapasonLight.cs" />
+    <Compile Include="test\HendsToHend.cs" />
+    <Compile Include="test\Card.cs" />
+    <Compile Include="test\Heands.cs" />
     <Compile Include="test\IForConvert.cs" />
-    <Compile Include="test\Suit1.cs" />
     <Compile Include="test\Convert.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="test\Heand.cs" />
     <Compile Include="test\Flop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Suit.cs" />
+    <Compile Include="test\Suit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

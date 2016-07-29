@@ -23,18 +23,18 @@ namespace Egor666
         public string[] diapason()
         {
             string diapason;
-            diapason = "77+, A9s+, KTs+";
+            diapason = "TT-88, T7o-T4o, A9s+, KTo+";
             diapason = diapason.Replace(" ", "");
             string[] cell = diapason.Split(',');
             return cell;
         }
         
         List<string> c = new List<string>();
-        List<DiapasonLight> diapasonLight;
+        public List<Heands> diapasonLight;
 
         public Convert()
         {
-            diapasonLight = new List<DiapasonLight>();
+            diapasonLight = new List<Heands>();
 
             for (int i = 0; i < diapason().Length; i++)
             {
@@ -58,43 +58,68 @@ namespace Egor666
                     {
                         for (int j = StringToInt(b); j <= 14; j++)
                         {
-                            diapasonLight.Add(new DiapasonLight(j, j));
+                            diapasonLight.Add(new Heands(j, j));
                         }
                         // тут я не понял, почему добавляются в DiapasonLight(j, j) еще третий аргумент Suit1 = s
                     }
                     // а тут не пары
                     if (a.Contains("o") | a.Contains("s"))
                         {
-                            Suit1 suit;
                             if (a.Contains("o") == true)
                             {
-                                suit = Suit1.o;
+                                string suit = "o";
                                 for (int j = StringToInt(d); j < StringToInt(b); j++)
                                 {
-                                    diapasonLight.Add(new DiapasonLight(StringToInt(b), j, suit));
+                                    diapasonLight.Add(new Heands(StringToInt(b), j, suit));
                                 }
                             }
                             else
                             {
-                                suit = Suit1.s;
+                                string suit = "s";
                                 for (int j = StringToInt(d); j < StringToInt(b); j++)
                                 {
-                                    diapasonLight.Add(new DiapasonLight(StringToInt(b), j, suit));
+                                    diapasonLight.Add(new Heands(StringToInt(b), j, suit));
                                 }
                             }
                         }
                     }
-
-                // тут я еще не доделал (((
+                
                 if (a.Contains("-"))
                 {
-
+                    if (b == d)
+                    {
+                        char e1 = a[4];
+                        string e = e1.ToString();
+                        for (int j = StringToInt(e); j <= StringToInt(b); j++)
+                        {
+                            diapasonLight.Add(new Heands(j, j));
+                        }
+                    }
+                    if (a.Contains("o") | a.Contains("s"))
+                    {
+                        char f1 = a[5];
+                        string f = f1.ToString();
+                        if (a.Contains("o") == true)
+                        {
+                            string suit = "o";
+                            for (int j = StringToInt(f); j <= StringToInt(d); j++)
+                            {
+                                diapasonLight.Add(new Heands(StringToInt(b), j, suit));
+                            }
+                        }
+                        else
+                        {
+                            string suit = "s";
+                            for (int j = StringToInt(f); j <= StringToInt(d); j++)
+                            {
+                                diapasonLight.Add(new Heands(StringToInt(b), j, suit));
+                            }
+                        }
+                    }
                 }
-
-
+                
             }
             
-
 
             Console.WriteLine(diapasonLight[5]);
             Console.ReadLine();

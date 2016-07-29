@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Egor666
 {
-    class DiapasonLight
+    class Heands
     {
-        public Suit1 Suit { get; private set; }
+        public string Suit { get; private set; }
 
         public int Value1 { get; private set; }
         public int Value2 { get; private set; }
-        public DiapasonLight(int value1, int value2, Suit1 suit)
+        public Heands(int value1, int value2, string suit)
         {
             Value1 = value1;
             Value2 = value2;
             Suit = suit;
         }
-        public DiapasonLight(int value1, int value2)
+        public Heands(int value1, int value2)
         {
             Value1 = value1;
             Value2 = value2;
@@ -26,12 +26,7 @@ namespace Egor666
         public override string ToString()
         {
 
-            string suitString = "";
-
-            if (Suit == Suit1.o)
-                suitString = "o";
-            if (Suit == Suit1.s)
-                suitString = "s";
+            string suitString = Suit;
 
             string valueString = Value1.ToString();
 
@@ -49,15 +44,15 @@ namespace Egor666
             string valueString2 = Value2.ToString();
 
             if (Value2 == 10)
-                valueString = "T";
+                valueString2 = "T";
             if (Value2 == 11)
-                valueString = "J";
+                valueString2 = "J";
             if (Value2 == 12)
-                valueString = "Q";
+                valueString2 = "Q";
             if (Value2 == 13)
-                valueString = "K";
+                valueString2 = "K";
             if (Value2 == 14)
-                valueString = "A";
+                valueString2 = "A";
 
 
             return string.Format("{0}{1}{2}", valueString, valueString2, suitString);
