@@ -20,9 +20,9 @@ namespace Egor666
 
             Console.WriteLine(flop);
 
-            Convert convert = new Convert();
+            HendsToHend heandsToheand = new HendsToHend();
 
-            Console.WriteLine(convert);
+            Console.WriteLine(heandsToheand);
 
             //for (int i= 0; i<5;i++)
             //{

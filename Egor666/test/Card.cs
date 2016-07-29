@@ -14,7 +14,7 @@ namespace Egor666
         public int Value { get; private set; }
         #endregion
         
-        public Card(Suit suit, int value)
+        public Card(int value, Suit suit)
         {
             Suit = suit;
             Value = value;

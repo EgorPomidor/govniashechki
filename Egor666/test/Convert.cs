@@ -52,17 +52,14 @@ namespace Egor666
 
                 if (a.Contains("+"))
                 {
-
-                    // вот тут я добавля пары
                     if (b == d)
                     {
                         for (int j = StringToInt(b); j <= 14; j++)
                         {
                             diapasonLight.Add(new Heands(j, j));
                         }
-                        // тут я не понял, почему добавляются в DiapasonLight(j, j) еще третий аргумент Suit1 = s
+                        
                     }
-                    // а тут не пары
                     if (a.Contains("o") | a.Contains("s"))
                         {
                             if (a.Contains("o") == true)
